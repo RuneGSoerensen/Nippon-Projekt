@@ -1,5 +1,19 @@
-:root {
+@font-face {
+    font-family: 'big shoulders inline text';
+    src: url('fonts/BigShouldersInlineText-Regular.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'big shoulders display';
+    src: url('fonts/BigShouldersDisplay-Regular.ttf') format('ttf');
+}
 
+
+:root {
+    --orange: #F1A177;
+    --darkblue: #003A75;
+    --offwhite: #FCFCFC;
+    --title: "big shoulders inline text";
+    --subtitle: "big shoulders display";
 }
 
 * {
@@ -7,3 +21,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+h1 {
+    font-size: 6rem;
+    font-family: var(--title);
+}
+  
