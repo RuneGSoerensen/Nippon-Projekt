@@ -25,4 +25,57 @@ h1 {
     font-size: 6rem;
     font-family: var(--title);
 }
-  
+  body{
+    background-color: var(--offwhite);
+  }
+
+
+/* style af vores måltidskasser siden */
+
+.menu-section{
+max-width: 80%;
+margin: auto;
+display: grid;
+}
+
+.menu-block{
+width: 400px;
+display: flex;
+flex-direction: column;
+color: var(--darkblue);
+border: 4px solid;
+border-radius: 10%;
+overflow: hidden;
+
+}
+
+.menu-navn{
+margin: 1rem;
+}
+.menu-tekst{
+margin-left: 1rem;
+margin-bottom: 0.5rem;
+}
+
+.clock{
+width: 20px;
+margin-left: 1rem;
+}
+
+.menu-tid{
+margin-left: 0.5rem;
+width: 50%;
+}
+.tid-container{
+    display: flex;
+}
+.måltidskasse-btn{
+width: 25%;
+margin: auto;
+margin-bottom: 10px;
+padding: 8px;
+border: 4px solid;
+border-radius: 20px;
+background-color: var(--darkblue);
+color: var(--offwhite);
+}
