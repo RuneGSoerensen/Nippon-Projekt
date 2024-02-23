@@ -45,7 +45,38 @@ header img {
 /* style af forside */
 .forside-billede{
     width: 100vw;
+
 }
+.overlay-text{
+    
+        position: absolute;
+        top: 90%;
+        left: 35%;
+        transform: translate(-50%, -75%);
+        font-size: 24px;
+        text-align: left;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 20px;
+        cursor: pointer;
+}
+
+.forside-overskrift{
+    text-align: center;
+    font-family: var(--title);
+    color: var(--darkblue);
+    font-size: 180px;
+}
+.forside-underoverskrift{
+    text-align: center;
+    font-family: var(--subtitle);
+    color: var(--darkblue);
+    font-size: 30px;
+}
+
+
+
+
+
 
 /* style af vores måltidskasser siden */
 .menu-section{
@@ -54,6 +85,8 @@ margin: auto;
 display: grid;
 
 }
+
+
 
 .menu-block{
 width: 400px;
@@ -194,7 +227,7 @@ font-family: var(--broed);
 
 /* Styling af footer */
 
-section{
+.footer-section{
     margin: 0;
     padding: 0;
     font-family: var(--subtitle);
@@ -208,6 +241,7 @@ footer{
     background: #FCFCFC;
     color: var(--darkblue);
     display: flex ;
+   font-size: 20px;
 }
 
 footer div{
@@ -229,7 +263,9 @@ footer div h3{
     display: block;
     color: #003A75;
     margin-bottom: 10px;
+    
 }
+
 footer a{
     text-decoration: none;
     color: var(--darkblue);
@@ -245,6 +281,7 @@ form input{
     outline: none;
     border: 2px solid var(--darkblue);
     color: var(--darkblue);
+    font-family: var(--broed);
 
 }
 
@@ -257,4 +294,14 @@ form button{
     font-size: 15px;
     cursor: pointer;
     font-family: var(--broed);
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
 }
