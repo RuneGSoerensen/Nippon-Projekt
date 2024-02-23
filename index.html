@@ -11,29 +11,39 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#"><img src="media/nippon-logo.svg" alt="Nippon noodle logo"></a></li>
-                <li><a href="pages/vores-maeltidskasser.html">Vores måltidskasser</a></li>
-                <li><a href="pages/vores-opskrifter.html">Opskrifter</a></li>
-                <li><a href="pages/kontakt.html">Kontakt</a></li>
-                <li><a href=""><img src="/media/iconer/profile.webp" alt="nippon chef profile"></a></li>
-                <li><a href=""><img src="media/iconer/shopping-basket.webp" alt="shopping basket"></a></li>
-            </ul>
+                <div class="logo">
+                    <a href="index.html"><img src="media/nippon-logo.svg" alt="nippon noodle logo" class="logo-img"></a>
+                </div>
+
+                    <ul class="nav-points">
+                        <li><a href="pages/vores-maeltidskasser.html">Vores måltidskasser</a></li>
+                        <li><a href="pages/vores-opskrifter.html">Opskrifter</a></li>
+                        <li><a href="pages/kontakt.html">Kontakt</a></li>
+                    </ul>
+                
+
+                <div class="profileBasketIcons">
+                    <a href="#"><img src="media/iconer/profile.webp" alt="" class="nav-icon"></a>
+                    <a href="#"><img src="media/iconer/shopping-basket.webp"  class="nav-icon" alt=""></a>
+                </div>
         </nav>
     </header>
+
 
 <!-- forside sektion -->
 <figure class="forside-banner">
 <img src="/media/forside-billede-sushi-01-01.webp" alt="billede af sushi" class="forside-billede">
 <div class="overlay-text">
 <h1 class="forside-overskrift">NIPPON</h1>
-<h2 class="forside-underoverskrift">Friske ingridienser og nemme opskrifter <br> skræddersyet til dig</h2>
+<h2 class="forside-underoverskrift">Friske ingredienser og nemme opskrifter <br> skræddersyet til dig</h2>
 </div>
 </figure>
+<div class="om-os-container">
+<img class="bølger" src="media/bølger.png" alt="">
 
-
-
-
+<h3 class="om-os-tekst">Hvem er vi?</h3>
+</div>
+<p class="tekst-forside">Vores mål hos Nippon er at tilbyde lækre og sunde måltidskasser, der passer til unge mennesker. Vi stræber efter bæredygtighed i alle vores processer, fra valg af ingredienser til emballage. Med vores nemme opskrifter ønsker vi at gøre madlavning til en leg, samtidig med at vi deler vores passion for god mad med en asiatisk inspiration. Velkommen til Nippon, hvor vi bringer smag, enkelhed og bæredygtighed sammen på tallerkenen.</p>
 
 
 <!-- Insætning af footer -->
@@ -41,6 +51,8 @@
 <section class="footer-section">
 
 <footer>
+
+  
     <div class="col-1">
         <h3>Useful links</h3>
         <a href="pages/kontakt.html">Kontakt</a>
