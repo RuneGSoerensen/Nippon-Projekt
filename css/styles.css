@@ -1,22 +1,11 @@
-@font-face {
-    font-family: 'big shoulders inline text';
-    src: url('fonts/BigShouldersInlineText-Regular.ttf') format('ttf');
-
-}
-@font-face {
-    font-family: 'big shoulders display';
-    src: url('fonts/BigShouldersDisplay-Regular.ttf') format('truetype');
-    src: url('fonts/BigShouldersDisplay-Regular.ttf') format('ttf');
-    
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
 
 :root {
     --orange: #F1A177;
     --darkblue: #003A75;
     --offwhite: #FCFCFC;
-    --title: "big shoulders inline text";
-    --subtitle: "big shoulders display";
+    --title: "Big Shoulders Inline Text";
+    --subtitle: "Big Shoulders Display";
     --broed: "montserrat";
 }
 
@@ -49,10 +38,12 @@ header img {
 
 /* style af vores måltidskasser siden */
 .menu-section{
-max-width: 80%;
-margin: auto;
-display: grid;
-
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    grid-row: auto;
 }
 
 .menu-block{
@@ -103,11 +94,13 @@ font-family: var(--broed);
 
 
 /* style af vores opskrifter siden */
-.menu-section{
+.opskrift-section{
     max-width: 80%;
     margin: auto;
     display: grid;
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    grid-row: auto;
     }
     
     .opskrift-block{
