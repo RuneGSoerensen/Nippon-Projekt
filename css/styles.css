@@ -242,11 +242,12 @@ justify-content: space-between;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr; 
-    background-image: url(/media/bølger3.png);
+    background-image: url(/media/bølger2.1.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position-x: 1000px;
-    background-position-y: 1px;
+    background-position-y: 400px;
+    
     
 }
 
@@ -281,6 +282,21 @@ justify-content: space-between;
     font-family: var(--title);
     color: var(--orange);
   margin-left: 4rem;
+}
+.redigereBtn{
+padding: 6px;
+border-radius: 10px;
+border: 3px solid var(--darkblue);
+background-color: var(--offwhite);
+margin-left: 6rem;
+}
+.købBtn{
+padding: 6px;
+border-radius: 10px;
+border: 3px solid var(--darkblue);
+background-color: var(--darkblue);
+color: var(--offwhite);
+margin-left: 1rem;
 }
 /* style af vores opskrifter siden */
 .body-opskrifter{
@@ -407,7 +423,7 @@ justify-content: space-between;
     .opskrift-modul {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     gap: 0px 0px;
@@ -440,15 +456,12 @@ justify-content: space-between;
     .details-modul {
         grid-area: details-modul;
     }
-    .details-modul img {
-        height: 36px;
-    }
     .details {
         list-style-type: none;
     }
     
     .details img{
-        width: 36px;
+        width: 20px;
     }
     .sideways-text {
         writing-mode: vertical-rl;
