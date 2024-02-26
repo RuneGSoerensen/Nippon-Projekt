@@ -467,7 +467,7 @@ justify-content: space-between;
     .step-3-modul { grid-area: step-3-modul; }
 
     .steps {
-        display: flex;column
+        display: flex;
     }
     .step-pictures {
         width: 80%;
