@@ -9,28 +9,35 @@
     <title>Nippon</title>
 </head>
 <body>
-
-<section class="måltidskasse-modal">
+<section class="background-blur-sektion">
+    <section class="måltidskasse-modal">
     <nav class="måltidskasse-modal-overskrift">
         <img src="/media/nippon-logo.svg" alt="nippons logo" class="logo-img">
         <h1 class="måltidskasse-modal-menu">Menu 1 Japansk</h1>
         <ul class="modal-">
             <li> Sværdhedsgrad: 
+                <figure>
                 <img src="/media/iconer/chef-hat-filled.webp" alt="kokkehat fyldt">
                 <img src="/media/iconer/chef-hat-filled.webp" alt="kokkehat fyldt">
                 <img src="/media/iconer/chef-hat-filled.webp" alt="kokkehat fyldt">
                 <img src="/media/iconer/chef-hat-empty.webp" alt="kokkehat tom">
                 <img src="/media/iconer/chef-hat-empty.webp" alt="kokkehat tom">
+            </figure>
             </li>
             <li>Krydret:
+                <figure>
                 <img src="/media/iconer/chili-filled.webp" alt="chilli fyldt">
                 <img src="/media/iconer/chili-filled.webp" alt="chilli fyldt">
                 <img src="/media/iconer/chili-filled.webp" alt="chilli fyldt">
                 <img src="/media/iconer/chili-empty.webp" alt="chilli tom">
                 <img src="/media/iconer/chili-empty.webp" alt="chilli tom">
+            </figure>
             </li>
-            <li>Tid: <img src="/media/iconer/clock.webp" alt="klokke">
-                30-45 MIN
+            <li>Tid:
+                <figure class="clock-move">
+                     <img src="/media/iconer/clock.webp" alt="klokke">
+                <p>30-45 MIN</p>
+                </figure>
             </li>
         </ul>
     </nav>
@@ -52,14 +59,14 @@
 
     <div class="antal-button">
         <h2>Antal dage</h2>
-        <button>-</button>
+        <button class="minus">-</button>
         <input type="text" placeholder="5">
         <button>+</button>
     </div>
     <div class="antal-button">
         <h2>Antal personer</h2>
-        <button>-</button>
-        <input type="text" placeholder="5">
+        <button class="minus">-</button>
+        <input type="text" placeholder="2">
         <button>+</button>
     </div>
 </div>
@@ -71,6 +78,7 @@
     <button class="købBtn">Køb måltidskasse</button>
 </figure>
 </div>
+</section>
 </section>
 
 
