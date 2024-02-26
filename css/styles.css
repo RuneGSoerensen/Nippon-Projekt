@@ -207,6 +207,24 @@ color: var(--offwhite);
 font-family: var(--broed);
 }
 
+/* måltidskasse modal sektion start style */
+
+.måltidskasse-modal {
+
+}
+.måltidskasse-modal-overskrift{
+display: flex;
+justify-content: space-between;
+
+}
+.modal{
+    margin-left: 50px;
+    text-decoration: none;
+}
+.modal- img{
+    width: 30px;
+   
+}
 
 /* style af vores opskrifter siden */
 .body-opskrifter{
@@ -327,6 +345,38 @@ font-family: var(--broed);
     }
     
     /* slut style af Vores opskrifter siden */
+
+    /* Opskrift pop up vindue */
+
+    .opskrift-modul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        grid-template-areas:
+          "logo-modul header-modul details-modul"
+          "pictures-modul pictures-modul ingridents-modul"
+          "pictures-modul pictures-modul ingridents-modul"
+          ". download-modul art-modul";
+      }
+      
+      .logo-modul { grid-area: logo-modul; }
+      
+      .header-modul { grid-area: header-modul; }
+      
+      .details-modul { grid-area: details-modul; }
+      
+      .ingridents-modul { grid-area: ingridents-modul; }
+      
+      .pictures-modul { grid-area: pictures-modul; }
+      
+      .download-modul { grid-area: download-modul; }
+      
+      .art-modul { grid-area: art-modul; }
+      
     
 
 
