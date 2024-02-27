@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/media/iconer/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vores måltidskasser</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
 </head>
 <body class="body-måltidskasse">
     <body>
@@ -15,7 +17,7 @@
                 </div>
     
                 <ul class="nav-points">
-                    <li><a href="vores-maeltidskasser.html">Vores måltidskasser</a></li>
+                    <li><a class="underline" href="vores-maeltidskasser.html">Vores måltidskasser</a></li>
                     <li><a href="vores-opskrifter.html">Opskrifter</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -23,6 +25,7 @@
                 <div class="profileBasketIcons">
                     <a href="#"><img src="/media/iconer/profile.webp" alt="" class="nav-icon"></a>
                     <a href="#"><img src="/media/iconer/shopping-basket.webp"  class="nav-icon" alt=""></a>
+                    <span class="itemCountHidden" id="itemCount"></span>
                 </div>
             </nav>
         </header>
@@ -192,7 +195,7 @@
             <button class="exit-button">x</button>
         <nav class="måltidskasse-modal-overskrift">
             <img src="/media/nippon-logo.svg" alt="nippons logo" class="logo-img">
-            <h1 class="måltidskasse-modal-menu">Menu 1</h1>
+            <h1 class="måltidskasse-modal-menu">Navngiv mig</h1>
             <ul class="modal-">
                 <li> Sværdhedsgrad: 
                     <figure>
@@ -253,8 +256,8 @@
         <figure>
             <img src="/media/Untitled-1-01.webp" alt="billede til måltidskasse">
         </figure>
-        <button class="redigereBtn">Redigere måltidskasse</button>
-        <button class="købBtn">Køb måltidskasse</button>
+        <button class="redigereBtn">Costumize</button>
+        <button class="koebBtn">Køb måltidskasse</button>
     </figure>
     </div>
     </section>

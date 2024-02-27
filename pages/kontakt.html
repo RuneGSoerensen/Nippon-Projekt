@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/media/iconer/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nippon Kontakt</title>
@@ -8,8 +9,77 @@
 </head>
 <body>
     
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/media/nippon-logo.svg" alt="nippon noodle logo" class="logo-img"></a>
+            </div>
+
+            <ul class="nav-points">
+                <li><a href="vores-maeltidskasser.html">Vores måltidskasser</a></li>
+                <li><a href="vores-opskrifter.html">Opskrifter</a></li>
+                <li><a class="underline" href="kontakt.html">Kontakt</a></li>
+            </ul>
+
+            <div class="profileBasketIcons">
+                <a href="#"><img src="/media/iconer/profile.webp" alt="" class="nav-icon"></a>
+                <a href="#"><img src="/media/iconer/shopping-basket.webp"  class="nav-icon" alt=""></a>
+            </div>
+        </nav>
+    </header>
+
+    <figure class="opskrift-banner">
+        <img src="/media/banner-undersider-kontakt-01.webp" alt="billede af sushi" class="opskrift-billede">
+        <div class="overlay-text-opskrift">
+        <h1 class="opskrift-overskrift">Kontakt</h1>
+        <h2 class="forside-underoverskrift2">Hvordan kan vi hjælpe dig?</h2>
+        </div>
+        
+<section class="kontakt-section">
+    <form class="kontakt-form">
 
 
+        <input type="navn" placeholder="Navn" required class="input-tekst"> <br>
+        <input type="email" placeholder="Email" required class="input-tekst"> <br>
+        <textarea name="besked" id="text-area" cols="1" rows="5" class="input-besked" placeholder="Skriv her"></textarea> 
+        <h4 class="tilmeld-nyhed">Tilmeld nyhedsbrev <input type="checkbox" class="tilmeld-checkbox"> </h4>
+        <br>
+        <button class="send-btn">Send</button>
+        <br> <br>
+    </form>
+
+    <figure class="faq-del">
+        <figcaption>
+     <h1 class="kontakt-h1">F.A.Q</h1>
+     <h2 class="kontakt-h2">Skriv en besked til os med formlen</h2>
+    </figcaption>
+   
+    <figure class="faq-billeder">
+    <div>
+        <div>
+    <h2>Generalt</h2>
+    <img src="/media/iconer/IMG_0001-kopi.png" alt="">
+    </div>
+    <div>
+    <h2>Levering</h2>
+    <img src="/media/iconer/IMG_0004.png" alt="">
+    </div>
+    </div>
+    <div>
+         <div>
+            <h2>Madspild</h2>
+            <img src="/media/iconer/IMG_0005.png" alt="">
+            </div>
+            <div>
+            <h2>Opskrifter</h2>
+            <img src="/media/iconer/IMG_0006.png" alt="">
+            </div>
+        </div>
+        </figure>
+</figure>
+</figure>
+
+</section>
     <!-- Insætning af footer -->
 
 <section class="footer-section">
@@ -22,7 +92,7 @@
         </div>
         <div class="col-2">
             <h3>Nyhedsbrev</h3>
-            <form>
+            <form class="footer-contact">
                 <input type="email" placeholder="Angiv din email adresse" required>
                 <br>
                 <button type="submit">Abonner nu</button>

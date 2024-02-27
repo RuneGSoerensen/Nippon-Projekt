@@ -27,11 +27,11 @@ h1 {
 
 /* Navigation */
 header {
-  background-color: rgba(255, 255, 255, 40%);
+  background-color: rgba(255, 255, 255, 60%);
   
-    box-shadow: 0px 10px 22px 0px rgba(255,255,255,0.52);
+    box-shadow: 0px 10px 22px 0px rgba(255,255,255,0.60);
     width: 100%;
-    position: absolute;
+    position: fixed;
     
 }
 header nav {
@@ -55,6 +55,25 @@ header nav {
     align-items: center;
     justify-content: space-between;
 }
+#itemCount {
+    border: solid 2px var(--orange);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+    font-family: var(--broed);
+    font-size: 1rem;
+    font-weight: 900;
+}
+.itemCountHidden {
+    display: none;
+}
 .nav-points{
     width: 70%;
     display:flex;
@@ -71,6 +90,10 @@ header nav {
 .nav-points li a{
     text-decoration: none;
     color: var(--darkblue);
+}
+.underline {
+    text-decoration: underline !important;
+    text-decoration-color: var(--orange) !important;
 }
 /* style af forside */
 .forside-billede{
@@ -233,7 +256,12 @@ margin-top: 2rem;
 border-radius: 40px;
 background-color: var(--broed);
 overflow: hidden;
+display: none;
 }
+#showSection {
+    display: block;
+}
+
 .måltidskasse-modal-overskrift{
 margin-top: 3rem;
 display: flex;
@@ -261,6 +289,7 @@ margin-right: 4rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
+    font-family: var(--broed);
 }
 .modal- img{
     width: 30px;
@@ -313,11 +342,18 @@ margin-right: 4rem;
   margin-bottom: 1rem;
   
 }
+
 .antal-button input{
     width: 30px;
     font-size: 1.5rem;
-    color: var(--darkblue);
+    color: var(--offwhite);
+    border: 0;
+    border-radius: 5px;
     text-align: center;
+    background-color:var(--darkblue);
+}
+.antal-button input::placeholder {
+    color: var(--offwhite);
 }
 .antal-button button{
     font-size: 1.5rem;
@@ -338,15 +374,27 @@ border: 3px solid var(--darkblue);
 background-color: var(--offwhite);
 margin-left: 6rem;
 margin-top: 4rem;
+font-family: var(--broed);
+color: var(--darkblue);
 }
-.købBtn{
+.koebBtn{
 padding: 6px;
 border-radius: 10px;
 border: 3px solid var(--darkblue);
 background-color: var(--darkblue);
 color: var(--offwhite);
 margin-left: 1rem;
+font-family: var(--broed);
 }
+/* rune leger lige med lidt javascript med den her id. */
+#koebBtn-koebt {
+    border-radius: 10px;
+    border: 3px solid var(--darkblue);
+    background-color: var(--darkblue);
+    color: var(--offwhite);
+    margin-left: 1rem;
+    font-family: var(--broed);
+    }
 /* style af vores opskrifter siden */
 .body-opskrifter{
         background-image: url(/media/bølger3.png);
@@ -357,6 +405,7 @@ margin-left: 1rem;
         
    
 }
+
 .opskrift-billede{
     width: 100vw;
    
@@ -469,24 +518,32 @@ margin-left: 1rem;
     /* slut style af Vores opskrifter siden */
 
     /* Opskrift pop up vindue */
+    .opskrift-modul{
+        width: 80vw;
+        margin: auto;
+        border-radius: 40px;
+        overflow: hidden;
+        background-image: url(/media/bølger-left.png);
+        background-repeat: no-repeat;
+        background-size: 25%;
+        background-position-x: 70vw;
+        background-position-y: 550px;
+    }
 
-    .steps-container {  display: grid;
-        grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr 1.1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
+    .opskrift-modul h1 {
+        font-size: 4rem;
+    }
+
+      .steps-container { 
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 1fr;
+        grid-template-rows: 1fr;
         justify-content: center;
         grid-template-areas:
-          "steps-text-1 steps-pictures-1 steps-text-2 steps-pictures-2 steps-text-3 steps-pictures-3"
-          "steps-text-1 step-guide-1 steps-text-2 step-guide-2 steps-text-3 step-guide-3";
-        width: 80%;
+          "steps-text-1 steps-pictures-1 steps-text-2 steps-pictures-2 steps-text-3 steps-pictures-3 steps-space ingridents-modul";
+        margin-top: 2rem;
       }
       
-      .steps-pictures-size {
-        height: 100px;
-        width: auto;
-      }
-
       .steps-text-1 { grid-area: steps-text-1; }
       
       .steps-pictures-1 { grid-area: steps-pictures-1; }
@@ -495,15 +552,56 @@ margin-left: 1rem;
       
       .steps-pictures-2 { grid-area: steps-pictures-2; }
       
-      .step-guide-1 { grid-area: step-guide-1; }
-      
-      .step-guide-2 { grid-area: step-guide-2; }
-      
-      .step-guide-3 { grid-area: step-guide-3; }
-      
       .steps-text-3 { grid-area: steps-text-3; }
       
       .steps-pictures-3 { grid-area: steps-pictures-3; }
+      
+      .steps-space { grid-area: steps-space; }
+      
+      .ingridents-modul { 
+        grid-area: 1/7/2/8; 
+        margin-left: 2rem;
+        margin-top: -4rem;
+        
+    }
+      
+      
+      .steps-pictures-size img {
+        height: 200px;
+        width: auto;
+        border-radius: 30px;
+      }
+
+      .step-text-size {
+        width: 200px;
+        margin-top: 10px;
+        color: var(--darkblue);
+      }
+
+      .step-text-size {
+        font-size: 18px;
+        font-family: var(--broed);
+      }
+
+     
+     
+      
+      .steps-btn{
+        float: right;
+        margin-right: 150px;
+        width: 15%;
+        padding: 8px;
+        border: 4px solid;
+        border-radius: 15px;
+        background-color: var(--darkblue);
+        color: var(--offwhite);
+        font-family: var(--broed);
+        margin-bottom: 2rem;
+        
+        }
+        .måltidskasse-modal-menu {
+            text-align: center;
+        }
       
 
 
@@ -525,11 +623,12 @@ margin-left: 1rem;
         width: 20px;
     }
     .sideways-text {
-        writing-mode: vertical-rl;
         text-align: center;
         display: inline-block;
         color: var(--orange);
-        font-size: 25px;
+        font-size: 36px;
+        letter-spacing: 1.5rem;
+        line-height: 52px;
         font-family: var(--title);
     }
 
@@ -545,16 +644,148 @@ margin-left: 1rem;
         border-radius: 40px;
     }
 
-    .nipponart-modul img {
-        height: 100px;
-        width: auto;
-        transform: rotate(90deg);
-    }
+  
         
-    
+    .ingridents-modul{   
+        font-family: var(--broed);
+        line-height: 40px;
+        color: var(--darkblue);
+      
+     
+    }
 
 
 
+
+    /* Kontakt */
+
+   .forside-underoverskrift2{
+    font-size: 30px;
+    font-family: var(--subtitle);
+    color: var(--orange);
+    font-weight: 500;
+   }
+
+   .kontakt-h1{
+    font-family: var(--subtitle);
+    font-weight: 500;
+    color: var(--orange);
+    margin-top: 2rem;
+   
+   }
+
+.kontakt-h2{
+    font-family: var(--broed);
+    color: var(--darkblue);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.kontakt-section{
+    background-image: url(/media/bølger3.png);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position-x: 85vw;
+    background-position-y: -20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+.kontakt-form{
+width: 400px;
+border-radius: 15px;
+border: 4px solid var(--darkblue);
+margin-left: 2rem;
+grid-area: 1/1/2/2;
+margin-top: 2rem;
+}
+.faq-del{
+    grid-area: 1/2/2/3;
+  
+}
+
+.faq-billeder img{
+    width: 100px;
+margin: 2rem;
+
+}
+.faq-billeder{
+    display: flex;
+
+}
+.input-tekst{
+    font-family: var(--broed);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--darkblue);
+    margin: 2rem;
+    background-color: var(--offwhite);
+    font-size: 20px;
+    padding: 1px;
+    width: 300px;
+
+}
+.input-besked{
+    width: 300px;
+    height: 150px;
+    font-family: var(--broed);
+    border: 1px solid var(--darkblue);
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: var(--offwhite);
+    font-size: 20px;
+    padding: 1px;
+}
+
+.kontakt-form input::placeholder{
+color: var(--darkblue);
+}
+.input-besked::placeholder{
+    color: var(--darkblue);
+ 
+}
+
+
+.kontakt-section{
+    color: var(--darkblue);
+}
+
+
+
+.send-btn{
+cursor: pointer;
+color: var(--orange);
+font-family: var(--broed);
+width: 25%;
+padding: 4px;
+border: 2px solid;
+border-radius: 10px;
+background-color: var(--offwhite);
+color: var(--offwhite);
+font-family: var(--broed);
+margin-left: 140px;
+background-color: var(--darkblue);
+
+}
+
+.tilmeld-nyhed{
+    font-family: var(--broed);
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.tilmeld-checkbox{
+    margin: 5px !important;
+
+}
+
+
+.send-btn:hover{
+    transform: scale(1.05);
+    }
 
 
 
@@ -614,7 +845,7 @@ footer a{
     color: var(--darkblue);
 }
 
-form input{
+.footer-contact input{
     width: 400px;
     height: 45px;
     border-radius: 4px;
@@ -628,7 +859,7 @@ form input{
 
 }
 
-form button{
+.footer-contact button{
     background: transparent;
     border: 2px solid var(--darkblue);
     color: var(--orange);
@@ -648,3 +879,4 @@ form button{
     margin: 10px;
     cursor: pointer;
 }
+
