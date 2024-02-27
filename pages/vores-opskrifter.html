@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vores Opskrifter</title>
     <link rel="stylesheet" href="/css/styles.css">
+    
 </head>
 <body class="body-opskrifter">
     <header>
@@ -52,7 +53,7 @@
         <img src="/media/Untitled-1-01.webp" alt="billede til menu 1" class="menu-pictures">
         <h3 class="opskrift-navn">Pokebowl m/oksekød og ost</h3>
         <p class="opskrift-tekst">Asiatisk-inspirerede Hot Wings med krydderurter og krydderier. En sprød og krydret smagsoplevelse.</p>
-        <button class="opskrift-btn">Se opskrift</button>
+        <button onclick="showPopUp()" class="opskrift-btn">Se opskrift</button>
     </div>
 
     <div class="opskrift-block">
@@ -123,10 +124,10 @@
     
     </section>
     
-    <section class="background-blur-sektion">
-        
+    <section id="showWindow" class="background-blur-sektion">
+
         <section class="opskrift-modul">
-            <button class="exit-button">x</button>
+            <button onclick="hidePopUp()" class="exit-button">x</button>
             <nav class="måltidskasse-modal-overskrift">
                 <img src="/media/nippon-logo.svg" alt="nippons logo" class="logo-img">
                 <h1 class="måltidskasse-modal-menu">Asiatisk<br>svinekødswok</h1>
@@ -226,5 +227,6 @@
           
         </section>
     </section>
+    <script src="/js/script.js"></script>
 </body>
 </html>
