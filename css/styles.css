@@ -335,6 +335,10 @@ transform: translate(-200px,-200px);
     display: flex;
     align-items: center;
     margin-right: 4rem;
+   
+}
+.clock-move p{
+    margin-left: 0.6rem;
 }
 
 .modal- li{
@@ -386,6 +390,7 @@ transform: translate(-200px,-200px);
     font-family: var(--subtitle);
     color: var(--darkblue);
     margin-bottom: 2rem;
+    height: 370px;
 }
 
 .antal-button{
@@ -394,8 +399,8 @@ transform: translate(-200px,-200px);
     font-size: 1.5rem;
     font-family: var(--title);
     color: var(--orange);
-  margin-left: 4rem;
-  margin-bottom: 1rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
   
 }
 
@@ -451,6 +456,8 @@ transform: translate(-200px,-200px);
     margin-left: 1rem;
     font-family: var(--broed);
     }
+
+    
 /* style af vores opskrifter siden */
 .body-opskrifter{
     background-image: url(/media/bølger3.png);
@@ -653,6 +660,7 @@ transform: translate(-200px,-200px);
         color: var(--offwhite);
         font-family: var(--broed);
         margin-bottom: 2rem;
+        cursor: pointer
         
         }
         .måltidskasse-modal-menu {

@@ -40,6 +40,7 @@ function confirmMessageSent() {
 
 // Javascript for at + og - antal personer i måltidskasse
 
+
 function addNumber() {
     const nummerInput = document.getElementById("numberInput");
     nummerInput.value = parseInt(nummerInput.value) + 1;
@@ -53,16 +54,63 @@ function minusNumber() {
 
 // Javascript for at + og - antal dage i måltidskasse
 
+
+
+// function addDay() {
+//     const daysInput = document.getElementById("daysInput");
+//     daysInput.value = parseInt(daysInput.value) + 1;
+// }
+
+// function minusDay() {
+//     const daysInput = document.getElementById("daysInput");
+//     daysInput.value = parseInt(daysInput.value) - 1;
+
+toggleDaysVisibility(1);
+// }
 function addDay() {
     const daysInput = document.getElementById("daysInput");
-    daysInput.value = parseInt(daysInput.value) + 1;
+    const currentDays = parseInt(daysInput.value) + 1;
+    daysInput.value = currentDays;
+    toggleDaysVisibility(currentDays);
 }
 
 function minusDay() {
     const daysInput = document.getElementById("daysInput");
-    daysInput.value = parseInt(daysInput.value) - 1;
-
+    const currentDays = parseInt(daysInput.value) - 1;
+    daysInput.value = currentDays;
+    toggleDaysVisibility(currentDays);
 }
+
+function toggleDaysVisibility(currentDays) {
+    const daysList = document.getElementById("menuliste").getElementsByTagName("li");
+
+    for (let i = 0; i < daysList.length; i++) {
+        if (i < currentDays) {
+            daysList[i].style.display = "list-item";
+        } else {
+            daysList[i].style.display = "none";
+        }
+    }
+}
+
+
+// Link til pdf med opskrift
+
+function handleDownload() {
+    const downloadBtn = document.getElementById("downloadThis");
+    const pdfUrl = '/media/pdf/donburi-opskrift.pdf';
+    const anchor = document.createElement('a');
+    anchor.href = pdfUrl;
+    anchor.download = 'donburi-opskrift.pdf';
+    anchor.target = "_blank";
+    anchor.click();
+}
+
+
+
+
+
+
 
 
 
