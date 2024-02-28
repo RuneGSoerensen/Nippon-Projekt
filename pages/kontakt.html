@@ -3,9 +3,12 @@
 <head>
     <link rel="icon" type="image/x-icon" href="/media/iconer/favicon.png">
     <meta charset="UTF-8">
+    <meta name="description" content="Nippon er en måltidskasse løsning, som levere asiatisk mad lavet med kærlighed.">
+    <meta name="keywords" content="måltidskasser, Asiatisks mad, hvilken måltidskasse er bedst, hvad koster en måltidskasse?">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nippon Kontakt</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/script.js" defer></script>
 </head>
 <body>
     
@@ -22,8 +25,8 @@
             </ul>
 
             <div class="profileBasketIcons">
-                <a href="#"><img src="/media/iconer/profile.webp" alt="" class="nav-icon"></a>
-                <a href="#"><img src="/media/iconer/shopping-basket.webp"  class="nav-icon" alt=""></a>
+                <a href="#"><img src="/media/iconer/profile.webp" alt="kokkehue profil" class="nav-icon"></a>
+                <a href="#"><img src="/media/iconer/shopping-basket.webp"  class="nav-icon" alt="shopping kurv"></a>
             </div>
         </nav>
     </header>
@@ -38,78 +41,100 @@
 <section class="kontakt-section">
     <form class="kontakt-form">
 
-
         <input type="navn" placeholder="Navn" required class="input-tekst"> <br>
         <input type="email" placeholder="Email" required class="input-tekst"> <br>
         <textarea name="besked" id="text-area" cols="1" rows="5" class="input-besked" placeholder="Skriv her"></textarea> 
         <h4 class="tilmeld-nyhed">Tilmeld nyhedsbrev <input type="checkbox" class="tilmeld-checkbox"> </h4>
         <br>
-        <button class="send-btn">Send</button>
-        <br> <br>
+        <button type="button" onclick="confirmMessageSent()" class="send-btn">Send</button>
+
+        <p class="kontakt-confirm" id="kontakt-confirm-message"></p>
     </form>
 
     <figure class="faq-del">
         <figcaption>
-     <h1 class="kontakt-h1">F.A.Q</h1>
-     <h2 class="kontakt-h2">Skriv en besked til os med formlen</h2>
-    </figcaption>
-   
-    <figure class="faq-billeder">
-    <div>
-        <div>
-    <h2>Generalt</h2>
-    <img src="/media/iconer/IMG_0001-kopi.png" alt="">
-    </div>
-    <div>
-    <h2>Levering</h2>
-    <img src="/media/iconer/IMG_0004.png" alt="">
-    </div>
-    </div>
-    <div>
-         <div>
+            <h1 class="kontakt-h1">F.A.Q</h1>
+            <h2 class="kontakt-h2">Skriv en besked til os med formlen</h2>
+        </figcaption>
+
+        <section class="faq-billeder fag-billeder-text">
+            <div class="generalt">
+                <h2>Generalt</h2>
+                <img src="/media/iconer/IMG_0001-kopi.png" alt="nippons kai fisk">
+            </div>
+
+            <div class="levering">
+                <h2>Levering</h2>
+                <img src="/media/iconer/IMG_0004.png" alt="leverings icon">
+            </div>
+
+            <div class="madspild">
+                <h2>Madspild</h2>
+                <img src="/media/iconer/IMG_0005.png" alt="madspilds icon">
+            </div>
+
+            <div class="opskrifter-faq">
+                <h2>Opskrifter</h2>
+                <img src="/media/iconer/IMG_0006.png" alt="opskrifts bog">
+            </div>
+
+        </section>
+        
+        <!-- <figure class="faq-billeder">
+            <div>
+            <div>
+            <h2>Generalt</h2>
+            <img src="/media/iconer/IMG_0001-kopi.png" alt="nippons kai fisk">
+            </div>
+            <div>
+            <h2>Levering</h2>
+            <img src="/media/iconer/IMG_0004.png" alt="leverings icon">
+            </div>
+            </div>
+            <div>
+            <div>
             <h2>Madspild</h2>
-            <img src="/media/iconer/IMG_0005.png" alt="">
+            <img src="/media/iconer/IMG_0005.png" alt="madspilds icon">
             </div>
             <div>
             <h2>Opskrifter</h2>
-            <img src="/media/iconer/IMG_0006.png" alt="">
+            <img src="/media/iconer/IMG_0006.png" alt="opskrifts bog">
             </div>
-        </div>
-        </figure>
-</figure>
-</figure>
+            </div>
+        </figure> -->
+    </figure>
 
-</section>
+    </section>
     <!-- Insætning af footer -->
 
-<section class="footer-section">
+    <section class="footer-section">
 
     <footer>
-        <div class="col-1">
-            <h3>Useful links</h3>
-            <a href="pages/kontakt.html">Kontakt</a>
-      
-        </div>
-        <div class="col-2">
-            <h3>Nyhedsbrev</h3>
-            <form class="footer-contact">
-                <input type="email" placeholder="Angiv din email adresse" required>
-                <br>
-                <button type="submit">Abonner nu</button>
-            </form>
-        </div>
-        <div class="col-3">
-            <h3>Contact</h3>
-            <p>Ryesgade<br>Aarhus, Danmark, DK</p>
-            <div class="social-icons"></div>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
+    <div class="col-1">
+    <h3>Useful links</h3>
+    <a href="pages/kontakt.html">Kontakt</a>
+
+    </div>
+    <div class="col-2">
+    <h3>Nyhedsbrev</h3>
+    <form class="footer-contact">
+    <input type="email" placeholder="Angiv din email adresse" required>
+    <br>
+    <button type="submit">Abonner nu</button>
+    </form>
+    </div>
+    <div class="col-3">
+    <h3>Contact</h3>
+    <p>Ryesgade<br>Aarhus, Danmark, DK</p>
+    <div class="social-icons"></div>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    </div>
     </footer>
-    
-    </section>
+
+</section>
     
 </body>
 </html>

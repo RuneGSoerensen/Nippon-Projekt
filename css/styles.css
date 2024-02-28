@@ -11,6 +11,7 @@
     --broed: "montserrat";
 }
 
+
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +29,7 @@ h1 {
 /* Navigation */
 header {
   background-color: rgba(255, 255, 255, 60%);
-  
+    z-index: 10;
     box-shadow: 0px 10px 22px 0px rgba(255,255,255,0.60);
     width: 100%;
     position: fixed;
@@ -77,7 +78,7 @@ header nav {
 .nav-points{
     width: 70%;
     display:flex;
-  
+    
     justify-content: space-around;
     align-items: center;
 }
@@ -161,9 +162,52 @@ header nav {
     text-align: center;
 }
 
+/* style af forside "slider" */
 
 
+.slider-section{
+    width: 100vw;
+    height: 430px;
+   overflow: hidden;
+    background-image: url(/media/background-til-motion-01.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 3rem;
+}
 
+.chopsticks{
+width: 15%;
+transform: translate(900px, -180px);
+}
+.dumplings{
+width: 55%;
+transform: translate(-200px,-200px);
+}
+.slider-tekst{
+    width: 300px;
+    color: var(--darkblue);
+}
+.slider-tekst h2{
+    font-family: var(--subtitle);
+    font-size: 3rem;
+}
+.slider-tekst p{
+    font-family: var(--subtitle);
+    font-size: 2rem;
+}
+.slider-tekst-1{
+    transform: translate(1100px, -700px);
+   
+}
+.slider-tekst-2{
+    transform: translate(100px ,-950px);
+    opacity: 0;
+}
+
+.slider-tekst-3{
+    transform: translate(100px ,-1000px);
+    opacity: 0;
+}
 
 /* style af vores måltidskasser siden */
 .menu-section{
@@ -172,6 +216,7 @@ header nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
+    grid-column-gap: 50px;
     justify-items: center;
  
 }
@@ -192,11 +237,13 @@ header nav {
     border: 5px solid;
     border-radius: 35px;
     overflow: hidden;
+    transition: 0.5s;
     }
-
+    
 .menu-navn{
     margin: 1rem;
     font-family: "big shoulders display";
+    font-size: 1.5rem;
 }
 .menu-tekst{
     margin-left: 1rem;
@@ -232,14 +279,14 @@ header nav {
 
 /* måltidskasse modal sektion start style */
 .background-blur-sektion{
-    width: 80vw;
-    height: 90vh;
-    background-color: rgba(220, 220, 220, 100%);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 60%);
+    z-index: 11;
     display: none;
     position: fixed;
-    top: 50px;
-    left: 200px;
-    border-radius: 50px;
+    top: 0;
+    left: 0;
 }
 .exit-button{
     width: 40px;
@@ -255,12 +302,15 @@ header nav {
 }
 .måltidskasse-modal {
     width: 80%;
+    height: auto;
     margin: auto;
     z-index: 1;
     margin-top: 2rem;
     border-radius: 40px;
-    background-color: var(--broed);
+    background-color: var(--offwhite);
     overflow: hidden;
+
+    transform: scale(0.90);
     }
 #showSection {
     display: block;
@@ -295,6 +345,10 @@ header nav {
 }
 .modal- img{
     width: 30px;
+    
+}
+.modal- figure img{
+    margin-right: 5px;
 }
 .grid-area-måltidskasse{
     display: grid; 
@@ -446,19 +500,18 @@ header nav {
     border: 5px solid;
     border-radius: 35px;
     overflow: hidden;
-    transition: 0.5s;
+
     }
-    .opskrift-block:hover {
-        transform: scale(1.05);
-    }
-    
+  
     .opskrift-navn{
     margin: 1rem;
     font-family: var(--subtitle);
     text-align: center;
+    font-size: 1.5rem;
     }
     .opskrift-tekst{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     font-family: var(--broed);
     text-align: center;
@@ -526,6 +579,8 @@ header nav {
     background-size: 25%;
     background-position-x: 70vw;
     background-position-y: 550px;
+    background-color: var(--offwhite);
+    transform: scale(0.90);
     }
 
 
@@ -575,11 +630,13 @@ header nav {
         width: 200px;
         margin-top: 10px;
         color: var(--darkblue);
+
       }
 
       .step-text-size {
         font-size: 18px;
         font-family: var(--broed);
+    
       }
 
      
@@ -680,6 +737,16 @@ header nav {
     font-weight: 500;
 }
 
+.kontakt-confirm {
+    font-family: var(--broed);
+    color: var(--darkblue);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 35px;
+    margin-right: 15px;
+}
+
 .kontakt-section{
     background-image: url(/media/bølger3.png);
     background-repeat: no-repeat;
@@ -699,19 +766,21 @@ margin-left: 2rem;
 grid-area: 1/1/2/2;
 margin-top: 2rem;
 }
-.faq-del{
-    grid-area: 1/2/2/3;
-  
-}
 
-.faq-billeder img{
-    width: 100px;
-margin: 2rem;
 
+.kontakt-section{
+    color: var(--darkblue);
+    font-family: var(--subtitle);
 }
 .faq-billeder{
-    display: flex;
-
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.faq-billeder img{
+    width: 100px;
+    margin: 2rem;
 }
 .input-tekst{
     font-family: var(--broed);
@@ -746,10 +815,6 @@ color: var(--darkblue);
  
 }
 
-
-.kontakt-section{
-    color: var(--darkblue);
-}
 
 
 
@@ -855,7 +920,6 @@ footer a{
     border: 2px solid var(--darkblue);
     color: var(--darkblue);
     font-family: var(--broed);
-
 }
 
 .footer-contact button{
